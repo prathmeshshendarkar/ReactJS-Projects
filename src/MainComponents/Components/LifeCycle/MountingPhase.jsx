@@ -32,11 +32,8 @@ class MountingPhase extends React.Component {
 
     componentDidMount(){
         console.log("I am in componentDidMount");
-        setTimeout(() => {
-            console.log("I am in set-timeout in componentDidMount");
-            this.setState({phase: "mounting", method: "componentDidMount"});
-            console.log(this.state);
-        }, 5000);
+        const data = new Promise()
+        console.log(data);
         // console.log("I am in componentDidMount outside of timeout");
         // this.setState({phase: "mounting", method: "componentDidMount 2"});
     }
