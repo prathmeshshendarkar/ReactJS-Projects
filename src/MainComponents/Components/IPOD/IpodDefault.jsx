@@ -4,16 +4,24 @@ import {classnames} from 'tailwindcss-classnames';
 import { themeStyle } from '../../../Styles/styles.js';
 
 const IpodDefault = (props) => {
-    const {theme, setTheme} = useContext(ThemeContext);
-    console.log(theme);
-    let currentTheme = `bg-${theme}-700`;
+    const { theme } = useContext(ThemeContext);
+    const themeClasses = {
+        blue: 'bg-blue-700',
+        red: 'bg-red-700',
+        green: 'bg-green-700',
+        yellow: 'bg-yellow-700',
+        slate: 'bg-slate-700',
+        white: 'bg-white-700'
+    };
+
+    const currentTheme = theme ? themeClasses[theme] : themeClasses["blue"];
     console.log(themeStyle(currentTheme));
     const {cardStatus, handleCardComponent, handleCardSettings} = props;
     console.log(`I am inside default`);
     // console.log(handleCardComponent);
     return (
         <div className='flex flex-col items-center h-[100%] px-1 py-4'>
-            <div className={themeStyle(currentTheme)}>
+            <div className={`flex flex-col justify-around items-center w-[90%] h-[85%] rounded-md ${currentTheme}`}>
                 <h1 className='p-2 text-center font-mono font-bold text-xl'>Welcome to your Digitally Stored Journey</h1>
                 <button className='w-[50%] bg-slate-950 text-slate-100 px-4 py-1 rounded-sm' onClick={() => handleCardComponent(!cardStatus)}>Change to Additional</button>
             </div>
