@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { ThemeContext } from '../Providers/ThemeProvider'
+import { ThemeContext } from '../Providers/MyProvider.jsx'
 
 const RadioButton = (props) => {
   const {theme, setTheme} = useContext(ThemeContext);

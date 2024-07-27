@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from './Providers/ThemeProvider';
+import { ThemeContext } from './Providers/MyProvider';
 import {classnames} from 'tailwindcss-classnames';
 import { themeStyle } from '../../../Styles/styles.js';
 

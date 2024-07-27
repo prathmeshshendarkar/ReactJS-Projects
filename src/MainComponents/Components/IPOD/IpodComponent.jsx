@@ -21,6 +21,16 @@ class IpodComponent extends React.Component {
         this.handleCardSettings = this.handleCardSettings.bind(this);
     }
 
+    componentDidMount(){
+        const alertString = `What all features does the application has??
+        1. We can change the theme of application in this path: Settings->Theme->Select Theme
+        2. Next we can uninstall a application from the application list: Settings->AppLists->Unisntall the application
+        3. We can play music: Application->MusicTab->Select Music
+        4. We can view the contact information under contacts Tab: Application->Contacts->View Contact
+        `
+        alert(alertString);
+    }
+
     handleCardComponent(cardStatus){
         // console.log(cardStatus);
         // console.log(this.state.card);

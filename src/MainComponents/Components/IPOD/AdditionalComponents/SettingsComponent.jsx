@@ -23,7 +23,7 @@ class SettingsComponent extends React.Component {
         console.log("I am inside SettingsComponent");
         const currentSetting = this.state.currentSetting;
         return (
-            <div className='flex flex-grow-0 justify-center space-x-4 h-[100%]'>
+            <div className='flex justify-center space-x-4 h-[100%]'>
                 <div>
                     <ul>
                         <ButtonComponent name="Theme" onSettingChange={this.onSettingChange} />

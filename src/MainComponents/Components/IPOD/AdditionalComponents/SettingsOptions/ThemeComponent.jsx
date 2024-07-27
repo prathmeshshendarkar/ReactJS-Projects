@@ -11,7 +11,7 @@ const ThemeComponent = () => {
           {
             ThemeData.map((e) => {
               const currentTheme = e.theme;
-              return <RadioButton name={currentTheme} />
+              return <RadioButton key={e.id} name={currentTheme} />
             })
           }
         </ul>
